@@ -9,6 +9,13 @@ type Thought {
     createdAt: String
     username: String
     reactionCount: Int
+    reactions: [Reaction]
+}
+type Reaction {
+    _id: ID
+    reactionBody: String
+    createdAt: String
+    username: String
 }
     type Query {
         thoughts(username: String): [Thought]
