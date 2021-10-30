@@ -5,6 +5,7 @@ import { useQuery, useMutation } from '@apollo/client';
 
 import ThoughtList from '../components/ThoughtList';
 import FriendList from '../components/FriendList';
+import ThoughtForm from '../components/ThoughtForm';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import { ADD_FRIEND } from '../utils/mutations';
@@ -58,9 +59,9 @@ const Profile = () => {
         </h2>
         {userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
-          Add Friend
-        </button>
-          )}
+            Add Friend
+          </button>
+        )}
       </div>
 
       <div className="flex-row justify-space-between mb-3">
@@ -76,6 +77,7 @@ const Profile = () => {
           />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
