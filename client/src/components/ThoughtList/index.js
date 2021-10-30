@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
-    if (!thoughts?.length) {
+    if (!thoughts.length) {
         return <h3>No thoughts Yet</h3>;
     }
 
