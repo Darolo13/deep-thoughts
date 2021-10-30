@@ -26,7 +26,7 @@ const SingleThought = props => {
           thought on {thought.createdAt}
         </p>
         <div className="card-body">
-          <p>{thought.thoughtText}t</p>
+          <p>{thought.thoughtText}</p>
         </div>
       </div>
       {thought.reactionCount > 0 && <ReactionList reactions={thought.reactions} />}
